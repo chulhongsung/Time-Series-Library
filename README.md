@@ -13,7 +13,7 @@ pip install reformer-pytorch=1.4.4 # if needed
 
 2. Data Preparation
 - Download datasets (`ETT-small`, `Electricity`, `Weather`, `Traffic`) from the following GitHub repository: [https://github.com/thuml/Time-Series-Library](https://github.com/thuml/Time-Series-Library).
-- Add downloaded datasets to `./data` folder.
+- Add downloaded datasets to `./dataset` folder.
 
 3. Train and evaluate benchmarks. All scripts for all benchmarks are under the folder `./scripts/`. The experimental results can be reproduced by running the following command:
 
