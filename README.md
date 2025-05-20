@@ -13,7 +13,7 @@ pip install reformer-pytorch=1.4.4 # if needed
 
 2. Data Preparation
 - Download datasets (`ETT-small`, `Electricity`, `Weather`, `Traffic`) from the following GitHub repository: [https://github.com/thuml/Time-Series-Library](https://github.com/thuml/Time-Series-Library).
-- Add downloaded datasets to `./dataset` folder.
+- Add downloaded datasets to `./data` folder.
 
 3. Train and evaluate benchmarks. All scripts for all benchmarks are under the folder `./scripts/`. The experimental results can be reproduced by running the following command:
 
@@ -52,3 +52,10 @@ bash ./scripts/long_term_forecast/ETT_script/Transformer_ETTh1_gls.sh
 bash ./scripts/long_term_forecast/ETT_script/Transformer_ETTh1_revin.sh
 bash ./scripts/long_term_forecast/ETT_script/Transformer_ETTh1_gls_revin.sh
 ```
+
+
+## Code references
+-  `thuml/Time-Series-Library`: [https://github.com/thuml/Time-Series-Library](https://github.com/thuml/Time-Series-Library)
+- `yuqinie98/PatchTST`: [https://github.com/yuqinie98/PatchTST](https://github.com/yuqinie98/PatchTST)
+- `google-research/google-research`: [https://github.com/google-research/google-research/tree/master/tsmixer](https://github.com/google-research/google-research/tree/master/tsmixer)
+- `ts-kim/RevIN`: [https://github.com/ts-kim/RevIN](https://github.com/ts-kim/RevIN)
