@@ -1,4 +1,4 @@
-This library is built upon TSLib, an open-source library for implementing benchmarks.   
+This library is built upon TSLib, an open-source library for implementing benchmarks of ''Non-Parametric Time-series Forecasting with Global and Local Standardization''.   
 In particular, our implementation focuses on the long-term forecasting task and analysis of standardization strategies.
  
 
@@ -11,12 +11,16 @@ pip install -r requirements.txt
 pip install reformer-pytorch=1.4.4 # if needed
 ``` 
 
+2. Data Preparation
+- Download datasets (`ETT-small`, `Electricity`, `Weather`, `Traffic`) from the following GitHub repository: [https://github.com/thuml/Time-Series-Library](https://github.com/thuml/Time-Series-Library).
+- Add downloaded datasets to `./data` folder.
 
-2. Train and evaluate benchmarks. All scripts for all benchmarks are under the folder `./scripts/`. The experimental results can be reproduced by running the following command:
+3. Train and evaluate benchmarks. All scripts for all benchmarks are under the folder `./scripts/`. The experimental results can be reproduced by running the following command:
 
 ```
-./scripts/long_term_forecast/{Dataset}/{Model_name}.sh
+./scripts/long_term_forecast/{dataset}/{model}.sh
 ```
+- `{dataset}` options: `ETT_script`, `ECL_script`, `Weather_script`, `Traffic_script`
 
 For example, the results of TimeMixer can be reproduced by running following commands:
 ```
@@ -34,13 +38,11 @@ bash ./scripts/long_term_forecast/Traffic_script/TimeMixer.sh
 For analysis of standardization strategies in Section 4.2, the experimental results of can be reproduced by running following commands:
 
 ```
-./scripts/long_term_forecast/{Dataset}/{Model_name}_{Strategy}.sh
+./scripts/long_term_forecast/{dataset}/{model}_{strategy}.sh
 ```
-
-Model_name = Transformer or TSMixer or DLinear 
-
-Strategy = gls, revin, gls_revin 
-
+- `{dataset}` options: `ETT_script (only ETTh1)` , `ECL_script`, `Weather_script`
+- `{model}` options: `Transformer`, `TSMixer`, `DLinear`
+- `{strategy}` options: `gls`, `revin`, `gls_revin`
 
 For example, 
 ```
