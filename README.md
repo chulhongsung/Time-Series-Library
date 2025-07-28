@@ -12,7 +12,7 @@ pip install reformer-pytorch=1.4.4 # if needed
 ``` 
 
 2. Data Preparation
-- Download datasets (`ETT-small`, `Electricity`, `Weather`, `Traffic`) from the following GitHub repository: [https://github.com/thuml/Time-Series-Library](https://github.com/thuml/Time-Series-Library).
+- Download datasets (`ETT-small`, `Weather`) from the following GitHub repository: [https://github.com/thuml/Time-Series-Library](https://github.com/thuml/Time-Series-Library).
 - Add downloaded datasets to `./data` folder.
 
 3. Train and evaluate benchmarks. All scripts for all benchmarks are under the folder `./scripts/`. The experimental results can be reproduced by running the following command:
@@ -20,7 +20,7 @@ pip install reformer-pytorch=1.4.4 # if needed
 ```
 ./scripts/long_term_forecast/{dataset}/{model}.sh
 ```
-- `{dataset}` options: `ETT_script`, `ECL_script`, `Weather_script`, `Traffic_script`
+- `{dataset}` options: `ETT_script`, `Weather_script`
 
 For example, the results of TimeMixer can be reproduced by running following commands:
 ```
@@ -30,9 +30,7 @@ bash ./scripts/long_term_forecast/ETT_script/TimeMixer_ETTm1.sh
 bash ./scripts/long_term_forecast/ETT_script/TimeMixer_ETTh2.sh
 bash ./scripts/long_term_forecast/ETT_script/TimeMixer_ETTm2.sh
 
-bash ./scripts/long_term_forecast/ECL_script/TimeMixer.sh
 bash ./scripts/long_term_forecast/Weather_script/TimeMixer.sh
-bash ./scripts/long_term_forecast/Traffic_script/TimeMixer.sh
 ```
 
 For analysis of standardization strategies in Section 4.2, the experimental results of can be reproduced by running following commands:
